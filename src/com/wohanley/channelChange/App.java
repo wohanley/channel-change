@@ -10,10 +10,10 @@ public class App extends PApplet
 	
 	public void setup()
 	{
-		img = loadImage("../resources/wind2.jpg");
+		img = loadImage("../resources/wind1.jpg");
 		size(img.width, img.height);
 		image(img, 0, 0);
-		rotator = new ChannelRotator();
+		rotator = new RgbChannelRotator();
 	}
 	
 	public void draw()
@@ -30,7 +30,7 @@ public class App extends PApplet
 		
 		for (int i = 0; i < pixels.length; i++)
 		{
-			pixels[i] = rotator.rotateChannels(pixels[i], ChannelRotationDirection.RedToGreenToBlue);
+			pixels[i] = rotator.rotateChannels(pixels[i], ChannelRotationDirection.RedToBlueToGreen);
 		}
 		
 		updatePixels();
