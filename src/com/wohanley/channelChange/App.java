@@ -10,7 +10,7 @@ public class App extends PApplet
 	
 	public void setup()
 	{
-		img = loadImage("../resources/wind1.jpg");
+		img = loadImage("../resources/fish.jpg");
 		size(img.width, img.height);
 		image(img, 0, 0);
 		rotator = new RgbChannelRotator();
